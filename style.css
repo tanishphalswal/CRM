@@ -137,6 +137,8 @@
 }
 .leads-sec img {
   width: 83%;
+  height: 303px;
+  object-fit: contain;
 }
 .leads-sec .solution {
   display: flex;

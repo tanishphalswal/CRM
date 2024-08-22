@@ -76,6 +76,12 @@
   .nav .login.show {
     display: block;
     width: fit-content;
+    position: absolute;
+    top: 179px;
+    z-index: 1;
+  }
+  .nav ul li a {
+    margin: 28px;
   }
   .nav h3 {
     display: block !important;
@@ -91,20 +97,22 @@
     /* right: -100%; */
     right: -586px;
   }
-  .nav ul.show {
-    right: 0 !important;
-  }
+  /* .nav ul.show {
+  } */
   .header-sec {
     overflow-x: hidden;
     width: 100vw;
   }
-  /* .nav-links .show{
+  .nav ul.show {
+    height: 162px;
+    background: #fff;
     position: fixed;
-    top: 49px;
-    right:0;
-    background: #333;
-    transition: 0.5s;
-  } */
+    top: 60px;
+    width: 100%;
+    right: 100%;
+    z-index: 1;
+    right: 0 !important;
+  }
 }
 form .form-control {
   width: 100%;
@@ -135,6 +143,9 @@ form .form-control {
   }
   .nav ul {
     padding-left: 44px;
+  }
+  form .form-control {
+    width: 47%;
   }
 }
 @media (min-width: 991px) {
