@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
-  max-width: 1270px;
+  max-width: 1448px;
   padding-top: 20px;
 }
 
@@ -17,12 +17,13 @@
   font-size: 30px;
   color: #3f8cff;
   font-weight: 700;
+  margin-right: 30px;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-
+  /* align-items: center; */
   padding-left: 44px;
   margin-top: 17px;
 }
@@ -41,31 +42,34 @@
   color: #3f8cff;
 }
 .nav .login {
-  margin-left: auto;
   padding: 8px 21px 10px 22px;
   color: #ffff;
   background-color: #2b59ff;
   border-radius: 5px;
   border: none;
   position: relative;
+  display: block;
 }
+
 .nav-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   background: none;
   border: none;
   color: #2b59ff;
   cursor: pointer;
 
   position: absolute;
-  right: 113px;
+  right: 11px;
+  top: 10px;
 }
 .nav ul.show {
   display: flex;
+  right: 0;
 }
-.nav-toggle {
+/* .nav-toggle {
   display: block;
-}
+} */
 .dashbard-container .dashboard img {
   width: 100%;
   /* margin-left: -14px; */
@@ -96,12 +100,12 @@
   color: #fff;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 28px;
 }
 .left-sec .logo {
   display: flex;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 25px;
   align-items: center;
 }
 .left-sec span {

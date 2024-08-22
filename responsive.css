@@ -3,11 +3,22 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     top: 60px;
-    left: 0;
-    background-color: #333;
+    right: 0;
+    /* background-color: #333; */
+    transition: right 0.5s ease-in;
   }
+  .login {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    background-color: #555;
+    border: none;
+    width: 100%;
+    text-align: left;
+  }
+
   .nav-links {
     display: none;
   }
@@ -41,13 +52,33 @@
   }
   .dashbard-container .left-sec p {
     font-size: 13px;
+  }
+  .vedio-para-img-div .form-div {
+    padding: 22px 21px;
+  }
+  .nav-login {
+    margin-top: 25px;
+    margin-left: -29px;
+  }
+  .dashbard-container {
+    margin-top: 15px;
+  }
+  .nav .login {
+    display: none;
+  }
+  .nav .login.show {
+    display: block;
+  }
+  .nav h3 {
+    display: block !important;
+  }
 }
 @media (min-width: 768px) {
   .nav-links {
     display: block;
   }
   .nav-toggle {
-    display: none;
+    display: none !important;
   }
   .leads-sec .row {
     display: flex;
@@ -59,11 +90,17 @@
     margin-left: -14px;
   }
   .nav {
-    margin-inline: 20px;
+    margin-inline: 60px;
   }
 }
 @media (min-width: 991px) {
   .header-sec {
     background: #e9effe;
+  }
+  .nav .login {
+    display: block;
+  }
+  .nav ul {
+    align-items: center;
   }
 }

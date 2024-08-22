@@ -27,15 +27,17 @@
             <button>Login</button>
         </div> -->
         <div class="nav">
-            <h3>CRM HAI</h3>
-
-            <ul class="nav-links">
-                <li><a class="active" href="Home">Home</a></li>
-                <li><a href="features">Features</a></li>
-                <li><a href="contact">Contact us</a></li>
-            </ul>
-            <button class="nav-toggle">☰</button>
+            <div class="navbar">
+                <h3>CRM HAI</h3>
+                <ul class="nav-links">
+                    <li><a class="active" href="Home">Home</a></li>
+                    <li><a href="features">Features</a></li>
+                    <li><a href="contact">Contact us</a></li>
+                </ul>
+            </div>
             <button class="login">Login</button>
+            <button class="nav-toggle">☰</button>
+
         </div>
 
         <div class="dashbard-container">
@@ -273,8 +275,10 @@
     <script>
         const navtoggle = document.querySelector('.nav-toggle');
         const navlinks = document.querySelector('.nav-links');
+        const button = document.querySelector('.login');
         navtoggle.addEventListener("click", () => {
             navlinks.classList.toggle('show');
+            button.classList.toggle('show');
 
         })
     </script>
