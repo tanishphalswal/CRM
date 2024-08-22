@@ -53,8 +53,12 @@
   .dashbard-container .left-sec p {
     font-size: 13px;
   }
-  .vedio-para-img-div .form-div {
+  /* .vedio-para-img-div .form-div {
     padding: 22px 21px;
+  } */
+  .vedio-para-img-div .form-div {
+    width: 100%;
+    left: 20px;
   }
   .nav-login {
     margin-top: 25px;
