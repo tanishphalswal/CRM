@@ -11,7 +11,19 @@
   max-width: 1448px;
   padding-top: 20px;
 }
-
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+/* .nav-links {
+  position: fixed;
+  right: -100%;
+} */
 .nav h3 {
   margin: 0;
   font-size: 30px;
@@ -61,7 +73,7 @@
 
   position: absolute;
   right: 11px;
-  top: 10px;
+  top: 24px;
 }
 .nav ul.show {
   display: flex;
