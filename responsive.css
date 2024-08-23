@@ -92,10 +92,9 @@
   }
   .nav ul {
     padding: 0;
-    position: relative;
+    position: absolute;
     transition: 0.3s;
-    /* right: -100%; */
-    right: -586px;
+    right: 100%;
   }
   /* .nav ul.show {
   } */
@@ -146,6 +145,9 @@ form .form-control {
   }
   form .form-control {
     width: 47%;
+  }
+  .leads-sec .solution {
+    padding: 0 185px;
   }
 }
 @media (min-width: 991px) {
