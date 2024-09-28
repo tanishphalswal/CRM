@@ -17,21 +17,24 @@
 
 <body>
     <div class="nav">
-        <div class="navbar">
-            <h3>CRM HAI</h3>
-            <ul class="nav-links">
-                <li><a class="active" href="Home">Home</a></li>
-                <li><a href="features">Features</a></li>
-                <li><a href="contact">Contact us</a></li>
-            </ul>
-        </div>
-        <button class="login">Login</button>
-        <button class="nav-toggle">☰</button>
+            <div class="navbar">
 
-    </div>
+                <img class="logo" src="assets/images/crmlogo.webp" alt="logo">
+               
+            </div>
+            <div class="items">
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="Contact.html">Contact us</a></li>
+                </ul>
+                <a class="login" href="https://www.dashboard.crmhai.com/login">Login</a>
+            </div>
+            <button class="nav-toggle">☰</button>
+
+        </div>
     <!--form-div start-->
     <div class=" vedio-para-img-div form-sec" id="contact">
-        <div class="container-fluid">
+        <div class="container-fluid form-sec">
             <div class="row form-div">
 
                 <div class="col-lg-5 col-12">
@@ -43,15 +46,17 @@
                         <div class="personal-info">
                             <div class="phone">
                                 <img src="assets/images/contact/ph..svg" alt="ph">
-                                <p>+1012 3456 789</p>
+                                <p>+91 79883 15190</p>
                             </div>
                             <div class="msg">
                                 <img src="assets/images/contact/msg.svg" alt="msg">
-                                <p>demo@gmail.com</p>
+                                <p> contact@crmhai.com
+
+                                </p>
                             </div>
                             <div class="location">
                                 <img src="assets/images/contact/location.svg" alt="location">
-                                <p>132 Dartmouth Street Boston, Massachusetts 02156 United States</p>
+                                <p> Address: B-38 OLD DLF Sector-14Gurugram, 122001</p>
                             </div>
                         </div>
                         <div>
@@ -72,34 +77,31 @@
                     <form id="contactForm" method="post">
                         <div class="form-control">
                             <label for="firstname">First Name</label>
-                            <input type="text" name="name" required>
+                            <input type="text" id="firstname" name="name" required>
                         </div>
                         <div class="form-control">
                             <label for="lastname">Last Name</label>
-                            <input type="text" name="lname" required>
+                            <input type="text" id="lastname" name="lname" required>
                         </div>
                         <div class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" name="email" required>
-
+                            <input type="email" id="email" name="email" required>
                         </div>
-
                         <div class="form-control">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" required placeholder="">
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-control">
                             <label for="companyname">Company Name</label>
-                            <input type="text" name="Cname" required>
+                            <input type="text" id="companyname" name="Cname" required>
                         </div>
-
                         <div class="form-control textarea">
-                            <label for="message">Brief Your Request:</label>
-                            <textarea name="message" id="" cols="30" rows="4" placeholder="write message"></textarea>
+                            <label for="message">Brief Your Request</label>
+                            <textarea id="message" name="message" cols="30" rows="3"
+                                placeholder="write message..."></textarea>
                         </div>
                         <div class="d-flex justify-content-end w-100">
-
-                            <button type="submit" class="light" id="sendButton">Send Massege</button>
+                            <button type="submit" class="light" id="sendButton">Send Message</button>
                         </div>
                     </form>
 
@@ -112,17 +114,17 @@
 
     <div class="footer">
         <div class="footer-content1">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Our CRM</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a class="footer-link" href="index.html">Home</a></li>
+            <li><a class="footer-link" href="#">Our CRM</a></li>
+            <li> <a class="footer-link active" href="Contact.html">Contact us</a></li>
         </div>
 
         <div class="footer-content2">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a class="footer-link" href="https://crmhai.com/terms&conditions.html">Terms & Conditions</a></li>
+            <li><a class="footer-link" href="Privacypolicy.html">Privacy Policy</a></li>
         </div>
-
     </div>
+
 
 
 
@@ -132,16 +134,79 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <script>
+<script>
         const navtoggle = document.querySelector('.nav-toggle');
-        const navlinks = document.querySelector('.nav-links');
-        const button = document.querySelector('.login');
+        const navlinks = document.querySelector('.items');
         navtoggle.addEventListener("click", () => {
             navlinks.classList.toggle('show');
-            button.classList.toggle('show');
 
         })
+
     </script>
+    <script>
+        let footerLinks = document.querySelectorAll('.footer-link');
+
+        footerLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+
+                footerLinks.forEach((elm) => elm.classList.remove('active'));
+
+
+                this.classList.add('active');
+            });
+        });
+
+
+    </script>
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            
+            // Access form fields
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('companyname').value;
+            const message = document.getElementById('message').value;
+
+            // Log the values (or handle them as needed)
+            console.log({
+                firstname,
+                lastname,
+                email,
+                phone,
+                company,
+                message
+            });
+
+            fetch('http://localhost:3000/postdata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    firstname,
+                    lastname,
+                    email,
+                    phone,
+                    company,
+                    message
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                     document.getElementById('contactForm').reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+
 </body>
 
 </html>

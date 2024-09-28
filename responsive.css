@@ -1,15 +1,48 @@
-@media (max-width: 768px) {
-  .nav ul {
-    display: block;
+
+@media (max-width:1300px){
+    .left-sec{
+        padding:10px 30px;
+    }
+    .nav{
+        margin-inline: 30px;
+    }
+    
+}
+@media (max-width: 991px) {
+    .nav .login{
+        width:fit-content;
+    }
+.nav .items{
+    display: flex;
     flex-direction: column;
-    width: 100%;
-
-    padding: 0;
-    position: relative;
-
-    /* right: -682px !important; */
-    transition: right 0.5s ease-in;
-  }
+    align-items: start;
+    gap: 5px;
+}
+.nav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 31px;
+        gap: 20px 0;
+}
+.nav .items{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        position: absolute;
+        left: -100%;
+        background: #fff;
+        width: 50%;
+        padding: 0 20px 20px 20px;
+        top: 63px;
+        transition: .3s;
+        height: 100vh;
+}
+.nav .items.show{
+    left:0;
+    justify-content: start;
+}
   .login {
     margin-top: 10px;
     padding: 10px;
@@ -20,20 +53,28 @@
     text-align: left;
   }
 
-  .nav-links {
-    display: none;
-  }
+
   .nav-toggle {
     display: block;
   }
   .leads-sec img {
     width: 100%;
+    height: fit-content;
   }
+  .personal-info {
+    padding-top: 20px;
+  }
+  .icons {
+    display: flex;
+    gap: 11px;
+    padding-top: 30px;
+  }
+
   .leads-sec .solution {
     width: 100%;
-    padding-left: 44px;
     margin-top: 15px;
     order: 2;
+    padding: 0 40px;
   }
   .footer ul {
     flex-direction: column;
@@ -41,17 +82,41 @@
     align-items: baseline;
   }
   .dashbard-container .left-sec {
-    padding-left: 18px;
+    padding: 0 20px;
     margin: 0;
   }
   .left-sec .logo {
-    gap: 5px;
+    gap: 6px 19px;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .nav {
     margin-inline: 20px;
   }
   .dashbard-container .left-sec h1 {
-    font-size: 37px;
+    font-size: 25px;
+  }
+  .left-sec .feature {
+    padding: 7px 14px;
+  }
+  .thankyou-content button {
+    padding: 8px 24px;
+  }
+  .Thankyou {
+    margin-top: 30px;
+    padding: 15px;
+  }
+  .thankyou-content h1 {
+    padding-bottom: 17px;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+  }
+  .thankyou-content h3 {
+    /* padding-bottom: 17px; */
+    /* font-weight: 600; */
+    font-size: 17px;
+    text-align: center;
   }
   .dashbard-container .left-sec p {
     font-size: 13px;
@@ -70,19 +135,7 @@
   .dashbard-container {
     margin-top: 15px;
   }
-  .nav .login {
-    display: none;
-  }
-  .nav .login.show {
-    display: block;
-    width: fit-content;
-    position: absolute;
-    top: 179px;
-    z-index: 1;
-  }
-  .nav ul li a {
-    margin: 28px;
-  }
+
   .nav h3 {
     display: block !important;
   }
@@ -90,29 +143,34 @@
     flex-direction: column;
     align-items: baseline;
   }
-  .nav ul {
-    padding: 0;
-    position: absolute;
-    transition: 0.3s;
-    right: 100%;
-  }
-  /* .nav ul.show {
-  } */
   .header-sec {
     overflow-x: hidden;
     width: 100vw;
+    padding-top:82px;
+    margin:0;
   }
-  .nav ul.show {
-    height: 162px;
-    background: #fff;
+  .nav{
     position: fixed;
-    top: 60px;
+    top: 0;
     width: 100%;
-    right: 100%;
-    z-index: 1;
-    right: 0 !important;
+    margin: 0;
+    padding: 9px 10px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0px -5px 6px 0px rgba(0, 0, 0, 0.75);
   }
-
+  .review-section .owl-nav button span {
+    border-radius: 50%;
+    height: 30px;
+    padding-bottom: 12px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 10px;
+    color: white;
+}
   form .form-control {
     width: 100%;
   }
@@ -120,19 +178,22 @@
     flex-direction: column;
   }
   .footer {
-    justify-content: space-around;
-    /* margin-top: 46px; */
+    justify-content: space-between;
     padding: 6px 10px;
   }
   .footer-content2 {
     margin-top: -34px;
   }
   .dashbard-container .dashboard img {
-    margin-left: 2px;
+    margin-left: 0;
     padding: 20px;
   }
+  .client-sec .title h1 {
+    padding: 0;
+  }
   .footer li {
-    margin: 10px;
+    margin: 7px;
+    font-size: 15px;
   }
   .privacy-header h1 {
     font-size: 20px;
@@ -140,6 +201,7 @@
   }
   .privacy-header {
     height: 160px;
+    margin-top:76px;
   }
   .privacy-content .header-content {
     padding: 18px 21px;
@@ -164,15 +226,27 @@
   .privacy-content .header-content h3 {
     font-size: 17px;
   }
+  .form-sec {
+    padding: 12px;
+    margin-top: 31px;
+  }
 }
 
 @media (min-width: 768px) {
-  .nav-links {
-    display: block;
-  }
+.nav{
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    background: #fff;
+    z-index: 2;
+    top:0;
+    min-width:100%;
+}
+
   .nav-toggle {
-    display: none !important;
-    left: 0;
+        right: 22px;
+        width: fit-content;
   }
   .leads-sec .row {
     display: flex;
@@ -181,31 +255,27 @@
     width: 100%;
   }
   .dashbard-container .dashboard img {
-    margin-left: 115px;
-
+    margin-left: 55px;
     box-shadow: 0px 31.45px 125.8px 0px rgba(0, 0, 0, 0.1);
   }
-  .dashboard {
-    padding: 40px;
-  }
-  .nav {
-    margin-inline: 60px;
-  }
-  .nav ul {
-    padding-left: 44px;
-  }
+  /*.dashboard {*/
+  /*  padding: 40px;*/
+  /*}*/
+    .nav ul {
+        padding-left: 0;
+    }
   form .form-control {
     width: 47%;
   }
-  .leads-sec .solution {
+  /* .leads-sec .solution {
     padding: 0 185px;
-  }
+  } */
 
   .footer .footer-content1,
   .footer-content2 {
     display: flex;
     justify-content: space-between;
-    gap: 74px;
+    gap: 20px;
     align-items: center;
     margin-top: 10px;
     margin-right: 40px;
@@ -215,14 +285,31 @@
     justify-content: center;
   }
 }
+@media screen and (max-width: 768px){
+    .review-section h3{
+        font-size:30px;
+    }
+}
 @media (min-width: 991px) {
   .header-sec {
     background: linear-gradient(180deg, #e9effe, #e9effe3d);
   }
-  .nav .login {
-    display: block;
-  }
+
   .nav ul {
     align-items: center;
   }
+   .form-sec {
+   
+    margin-top: 31px;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+    .privacy-header {
+        height: 95px;
+    }
+    .privacy-header img{
+        object-fit:cover;
+    }
 }

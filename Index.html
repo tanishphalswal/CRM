@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="style.css" class="css">
     <link rel="stylesheet" href="responsive.css" class="css">
 </head>
@@ -21,14 +22,17 @@
 
         <div class="nav">
             <div class="navbar">
-                <h3>CRM HAI</h3>
-                <ul class="nav-links">
-                    <li><a class="active" href="Home">Home</a></li>
-                    <li><a href="features">Features</a></li>
-                    <li><a href="contact">Contact us</a></li>
-                </ul>
+
+                <img class="logo" src="assets/images/crmlogo.webp" alt="logo">
+               
             </div>
-            <button class="login">Login</button>
+            <div class="items">
+                 <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                </ul>
+                <a class="login" href="http://dashboard.crmhai.com/login">Login</a>
+            </div>
             <button class="nav-toggle">☰</button>
 
         </div>
@@ -43,21 +47,23 @@
                             on the same integrated platform. We call it Einstein 1. It allows you to work smarter and
                             spend more time increasing connections, productivity, and your bottom line.
                         </p>
-                        <button class="feature">Our Features</button>
+                        <a href="/Contact.html" class="feature">Contact US</a>
                         <div class="logo">
                             <img src="assets/images/Company's logo.svg" alt="logo">
                             <span>Lead CRM</span>
-                            <img src="assets/images/star.svg" alt="star">
-                            <img src="assets/images/star.svg" alt="star">
-                            <img src="assets/images/star.svg" alt="star">
-                            <img src="assets/images/star.svg" alt="star">
-                            <img src="assets/images/star.svg" alt="star">
-                            <p>4900+ 5 Stars</p>
+                            <div>
+                                <img src="assets/images/star.svg" alt="star">
+                                <img src="assets/images/star.svg" alt="star">
+                                <img src="assets/images/star.svg" alt="star">
+                                <img src="assets/images/star.svg" alt="star">
+                                <img src="assets/images/star.svg" alt="star">
+                            </div>
+                            <p>30+ 4.5Stars</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 dashboard">
-                    <img src="assets/images/dashboard.png" alt="dashbaoard">
+                    <img src="assets/images/dashboard.webp" alt="dashbaoard">
                 </div>
             </div>
         </div>
@@ -65,7 +71,7 @@
 
     <div class="client-sec">
         <div class="title">
-            <h1>Why clients choose<span>Our CRM?</span> </h1>
+            <h1>Why clients choose<span> Our CRM?</span> </h1>
         </div>
         <div class="leads-sec">
             <div class="row">
@@ -168,8 +174,9 @@
     </div> -->
     <!--form-div start-->
     <div class=" vedio-para-img-div form-sec" id="contact">
-        <div class="container-fluid">
+        <div class="container-fluid form-sec">
             <div class="row form-div">
+
 
                 <div class="col-lg-5 col-12">
                     <div class="contact-div">
@@ -180,15 +187,17 @@
                         <div class="personal-info">
                             <div class="phone">
                                 <img src="assets/images/contact/ph..svg" alt="ph">
-                                <p>+1012 3456 789</p>
+                                <p>+9179883 15190</p>
                             </div>
                             <div class="msg">
                                 <img src="assets/images/contact/msg.svg" alt="msg">
-                                <p>demo@gmail.com</p>
+                                <p> contact@crmhai.com
+
+                                </p>
                             </div>
                             <div class="location">
                                 <img src="assets/images/contact/location.svg" alt="location">
-                                <p>132 Dartmouth Street Boston, Massachusetts 02156 United States</p>
+                                <p> Address: B-38 OLD DLF Sector-14Gurugram, 122001</p>
                             </div>
                         </div>
                         <div>
@@ -206,37 +215,34 @@
                 </div>
 
                 <div class="col-lg-7 col-12">
-                    <form id="contactForm" method="post">
+                   <form id="contactForm" method="post">
                         <div class="form-control">
                             <label for="firstname">First Name</label>
-                            <input type="text" name="name" required>
+                            <input type="text" id="firstname" name="name" required>
                         </div>
                         <div class="form-control">
                             <label for="lastname">Last Name</label>
-                            <input type="text" name="lname" required>
+                            <input type="text" id="lastname" name="lname" required>
                         </div>
                         <div class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" name="email" required>
-
+                            <input type="email" id="email" name="email" required>
                         </div>
-
                         <div class="form-control">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" required placeholder="">
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-control">
                             <label for="companyname">Company Name</label>
-                            <input type="text" name="Cname" required>
+                            <input type="text" id="companyname" name="Cname" required>
                         </div>
-
                         <div class="form-control textarea">
-                            <label for="message">Brief Your Request:</label>
-                            <textarea name="message" id="" cols="30" rows="4" placeholder="write message"></textarea>
+                            <label for="message">Brief Your Request</label>
+                            <textarea id="message" name="message" cols="30" rows="3"
+                                placeholder="write message..."></textarea>
                         </div>
                         <div class="d-flex justify-content-end w-100">
-
-                            <button type="submit" class="light" id="sendButton">Send Massege</button>
+                            <button type="submit" class="light" id="sendButton">Send Message</button>
                         </div>
                     </form>
 
@@ -247,18 +253,176 @@
     </div> <!--form-div end-->
 
 
+        <div class="review-section">
+      <h3>Our Customers <span>Review</span></h3>
+      <div class="slider">
+        <div class="owl-carousel owl">
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+CRM Hai has revolutionized how we manage our customer relationships. It's easy to use and has streamlined our workflow completely.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/quikdy.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Quikdy</h5>
+                    <div class="stars-container">5</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+               From tracking leads to organizing projects, CRM Hai has been a game-changer for our team. The user-friendly interface and customization are just what we needed!
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/adshoot.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Ad Shoot</h5>
+                    <div class="stars-container">4</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+               We needed a CRM that would match our high-tech demands, and CRM Hai exceeded expectations. It's the backbone of our project management.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/CET.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Cut Edge</h5>
+                    <div class="stars-container">5</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+                With CRM Hai, we’ve been able to manage our clients more efficiently than ever. It’s a must-have for any growing business.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/profile-pic.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Insite Gravitty</h5>
+                    <div class="stars-container">5</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+               CRM Hai has transformed the way we engage with our customers. It helps us focus on building stronger relationships.   </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/suppkart.svg" alt="" />
+                  <div class="rev-img">
+                    <h5>Suppkart</h5>
+                    <div class="stars-container">4</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+             CRM Hai is a reliable tool for tracking sales and customer interactions, boosting our overall productivity.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/profile-pic.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Magnificent</h5>
+                    <div class="stars-container">5</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+             With CRM Hai, our team can handle leads more efficiently. It’s an indispensable tool for our business.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/profile-pic.png" alt="" />
+                  <div class="rev-img">
+                    <h5>RIS</h5>
+                    <div class="stars-container">5</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <!--  -->
+              <p>
+             CRM Hai has made managing client data so much easier, allowing us to focus more on providing value.
+              </p>
+
+              <div class="about-review-customer">
+                <div class="left-about-review-customer">
+                  <img src="assets/images/profile-pic.png" alt="" />
+                  <div class="rev-img">
+                    <h5>Career Define</h5>
+                    <div class="stars-container">4</div>
+                  </div>
+                </div>
+                <img src="assets/images/invertedComa.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer">
         <div class="footer-content1">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Our CRM</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a class="footer-link active" href="Home.html">Home</a></li>
+            <li><a class="footer-link" href="https://www.dashboard.crmhai.com/login">Our CRM</a></li>
+            <li> <a class="footer-link" href="Contact.html">Contact us</a></li>
         </div>
 
         <div class="footer-content2">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a class="footer-link" href="https://crmhai.com/terms&conditions.html">Terms & Conditions</a></li>
+            <li><a class="footer-link" href="Privacypolicy.html">Privacy Policy</a></li>
         </div>
-
     </div>
 
 
@@ -268,17 +432,136 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplaySpeed:2000,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          900: {
+            items: 3,
+          },
+        },
+      });
+    </script>
     <script>
         const navtoggle = document.querySelector('.nav-toggle');
-        const navlinks = document.querySelector('.nav-links');
-        const button = document.querySelector('.login');
+        const navlinks = document.querySelector('.items');
         navtoggle.addEventListener("click", () => {
             navlinks.classList.toggle('show');
-            button.classList.toggle('show');
 
         })
+
     </script>
+    <script>
+        let footerLinks = document.querySelectorAll('.footer-link');
+
+        footerLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+
+                footerLinks.forEach((elm) => elm.classList.remove('active'));
+
+
+                this.classList.add('active');
+            });
+        });
+
+
+    </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateStars();
+        });
+
+        function updateStars() {
+            const starsContainers = document.querySelectorAll('.stars-container');
+
+            starsContainers.forEach(function (starsContainer) {
+                const value = parseFloat(starsContainer.textContent);
+                starsContainer.innerHTML = '';
+
+                const fullStars = Math.min(Math.floor(value), 5);
+                const decimalPart = value % 1;
+
+                for (let i = 1; i <= fullStars; i++) {
+                    if (i === fullStars && decimalPart > 0) {
+                        createStarWithClass(starsContainer, '&#9733;', 'half-star');
+                    } else {
+                        createStar(starsContainer, '&#9733;');
+                    }
+                }
+            });
+        }
+
+        function createStar(container, content) {
+            const star = document.createElement('span');
+            star.className = 'star';
+            star.innerHTML = content;
+            container.appendChild(star);
+        }
+
+        function createStarWithClass(container, content, className) {
+            const star = document.createElement('span');
+            star.className = className;
+            star.innerHTML = content;
+            container.appendChild(star);
+        }
+    </script>
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            
+            // Access form fields
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('companyname').value;
+            const message = document.getElementById('message').value;
+
+            // Log the values (or handle them as needed)
+            console.log({
+                firstname,
+                lastname,
+                email,
+                phone,
+                company,
+                message
+            });
+
+            fetch('http://localhost:3000/postdata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    firstname,
+                    lastname,
+                    email,
+                    phone,
+                    company,
+                    message
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                     document.getElementById('contactForm').reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
 </body>
 
 </html>

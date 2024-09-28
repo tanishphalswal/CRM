@@ -1,0 +1,10 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect 404 errors to not-found.html
+ErrorDocument 404 /not-found.html
+
+# Redirect any extra segments after valid pages to not-found.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /not-found.html [L]
